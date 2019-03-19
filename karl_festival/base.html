@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="shortcut icon" href="{{ static_assets_folder }}/images/favicon.ico" />
+  <meta name="twitter:site" content="@hikarlofficial">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:url" content="https://www.hikarl.com">
+  <meta property="og:image" content="https://www.hikarl.com/{{ static_assets_folder }}/images/home-karl.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="fb:app_id" content="1088567537890538">
+  {% block head %}{% endblock %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-82810303-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</head>
+<body class='no-js'>
+	<script>
+		document.body.className = '';
+	</script>
+	<!--[if lte IE 9 ]>
+	<script>
+		document.body.className = 'no-js';
+		const oldIE = true;
+	</script>
+	<![endif]--> 
+  {% block content %}{% endblock %}
+  <script>
+    const PATHS = {
+	    'static': '{{ static_assets_folder }}',
+	    'versioned': '{{ versioned_assets_folder }}'
+    };
+  </script>
+  <script src="{{ versioned_assets_folder }}/js/karl.min.js"></script>
+</body>
+</html>
